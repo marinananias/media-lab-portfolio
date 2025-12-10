@@ -1,22 +1,33 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+import "../styles/global.css";
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+const { title = "Media Lab Portfolio · Marina Ananias" } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Media Lab portfolio of Marina Ananias – integrating music, computation, sensing, and human-centered systems."
+    />
+  </head>
+  <body>
+    <main>
+      <slot />
+      <footer class="footer">
+        <div>© {new Date().getFullYear()} · Marina Ananias</div>
+        <nav class="footer-nav">
+          <a class="footer-link" href="#cover">Cover</a>
+          <a class="footer-link" href="#interfaces">Interfaces</a>
+          <a class="footer-link" href="#systems">Systems</a>
+          <a class="footer-link" href="#signals">Signals</a>
+          <a class="footer-link" href="#language">Language</a>
+          <a class="footer-link" href="#future">Future Directions</a>
+        </nav>
+      </footer>
+    </main>
+  </body>
+</html>
