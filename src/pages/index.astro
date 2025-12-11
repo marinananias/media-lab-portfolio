@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
   <!-- COVER / LANDING -->
-  <section id="cover" class="section">
+  <section id="landing" class="section">
 
     <div class="cover-card">
       <h1 class="cover-name">Marina Ananias</h1>
@@ -52,13 +52,10 @@ import Layout from "../layouts/Layout.astro";
           <h2 class="movement-title">Where expression begins</h2>
         </div>
       </div>
-      <p class="movement-epigraph">
-        “Where expression begins in the hand, in motion, in the meeting of sound
-        and touch”
-      </p>
       <p class="movement-intro">
-        These works explore how accessible tools and interfaces can open musical
-        expression to anyone—performers, students, and people simply curious
+        <i>Where expression begins in the hand, in motion, in the meeting of sound
+        and touch.</i> These works explore how accessible tools and interfaces can open musical
+        expression to anyone: performers, students, and people simply curious
         about sound
       </p>
     </header>
@@ -176,7 +173,7 @@ import Layout from "../layouts/Layout.astro";
 
           <!-- RIGHT: text + tags + relevance -->
           <div class="piece-split-text">
-            <p class="piece-overview">
+            <p class="piece-overview--onegrid">
               This browser-based keyboard turns mouse movement into musical gesture, allowing users to compose and
               perform without physical instruments. Its minimalist interface encourages intuitive exploration,
               making it ideal for beginners learning fundamental musical relationships and for quickly testing
@@ -221,99 +218,93 @@ import Layout from "../layouts/Layout.astro";
         <div>
           <div class="movement-label">Movement II — Systems</div>
           <h2 class="movement-title">
-            Where technology becomes infrastructure.
+            Where technology becomes infrastructure
           </h2>
         </div>
       </div>
-      <p class="movement-epigraph">
-        “Where technology becomes infrastructure for belonging, opportunity, and
-        collective imagination.”
-      </p>
       <p class="movement-intro">
-        These works show how creative computation can support large-scale
+        <i>Where technology becomes infrastructure for belonging, opportunity, and
+        collective imagination.</i> These works show how creative computation can support large-scale
         communities, designing not just tools but ecosystems for participation
         and growth.
       </p>
     </header>
 
-    <div class="pieces">
-      <!-- Piece 3: BRASA ecosystem -->
-      <article class="piece">
-        <h3 class="piece-title">
-          Piece 3 — BRASA
-        </h3>
+    <!-- Piece 3: BRASA ecosystem -->
+    <article class="piece">
+      <h3 class="piece-title">
+        Piece 3 — BRASA
+      </h3>
 
-        <div class="piece-media-label">A Digital Ecosystem for a Global Community</div>
+      <div class="piece-media-label">A Digital Ecosystem for a Global Community</div>
 
-        <p class="piece-body">
-          BRASA is the world's largest network of Brazilian students abroad, and
-          I led the redesign of its digital ecosystem as Director of Technology
-          and later COO. This included a new website, internal portal, mobile
-          app, and unified database, transforming fragmented systems into a
-          cohesive platform that supports conferences, mentorships,
-          scholarships, and career opportunities for more than 15,000 students.
-          Our work increased site traffic by 170% and improved NPS by 105
-          points.
-        </p>
+      <p class="piece-body">
+        BRASA is the world's largest network of Brazilian students abroad, and
+        I led the redesign of its digital ecosystem as Director of Technology
+        and later COO. This included a new website, internal portal, mobile
+        app, and unified database, transforming fragmented systems into a
+        cohesive platform that supports conferences, mentorships,
+        scholarships, and career opportunities for more than 15,000 students.
+        Our work increased site traffic by 170% and improved NPS by 105
+        points.
+      </p>
 
-        <div class="piece-meta-row" style="margin-top: 0.9rem;">
-          <span class="piece-meta-pill">ReactJS & React Native</span>
-          <span class="piece-meta-pill">Next.js</span>
-          <span class="piece-meta-pill">Django REST Framework</span>
-          <span class="piece-meta-pill">Python</span>
-          <span class="piece-meta-pill">Typescript</span>
-          <span class="piece-meta-pill">Docker</span>
-          <span class="piece-meta-pill">AWS</span>
-          <span class="piece-meta-pill">PostgreSQL</span>
-          <span class="piece-meta-pill">Product Management</span>
-          <span class="piece-meta-pill">Software Development Life Cycle</span>
-          <span class="piece-meta-pill">Leadership of Cross-Functional Team</span>
-        </div>
-    
-        <div class="piece-media-block">
-          <div class="piece-media-grid piece-media-grid--three--brasa">
+      <div class="piece-meta-row" style="margin-top: 0.9rem;">
+        <span class="piece-meta-pill">ReactJS & React Native</span>
+        <span class="piece-meta-pill">Next.js</span>
+        <span class="piece-meta-pill">Django REST Framework</span>
+        <span class="piece-meta-pill">Python</span>
+        <span class="piece-meta-pill">Typescript</span>
+        <span class="piece-meta-pill">Docker</span>
+        <span class="piece-meta-pill">AWS</span>
+        <span class="piece-meta-pill">PostgreSQL</span>
+        <span class="piece-meta-pill">Product Management</span>
+        <span class="piece-meta-pill">Software Development Life Cycle</span>
+        <span class="piece-meta-pill">Leadership of Cross-Functional Team</span>
+      </div>
+  
+      <div class="piece-media-block">
+        <div class="piece-media-grid piece-media-grid--three--brasa">
 
-            <figure class="media-figure">
-              <div class="media-frame media-frame--medium">
-                <img
-                  src="/media/brasa-app.png"
-                  alt="Mockups of the official BRASA mobile app on multiple phones"
-                  class="media-img"
-                />
-              </div>
-              <figcaption class="media-caption">
-                Official BRASA mobile app
-              </figcaption>
-            </figure>
+          <figure class="media-figure">
+            <div class="media-frame media-frame--medium">
+              <img
+                src="/media/brasa-app.png"
+                alt="Mockups of the official BRASA mobile app on multiple phones"
+                class="media-img"
+              />
+            </div>
+            <figcaption class="media-caption">
+              Official BRASA mobile app
+            </figcaption>
+          </figure>
 
-            <figure class="media-figure">
-              <div class="media-frame media-frame--medium">
-                <img
-                  src="/media/brasa-portal-gobrasa.png"
-                  alt=""
-                  class="media-img"
-                />
-              </div>
-              <figcaption class="media-caption">
-               
-              </figcaption>
-            </figure>
+          <figure class="media-figure">
+            <div class="media-frame media-frame--medium">
+              <img
+                src="/media/brasa-portal-gobrasa.png"
+                alt=""
+                class="media-img"
+              />
+            </div>
+            <figcaption class="media-caption">
+              
+            </figcaption>
+          </figure>
 
-            <figure class="media-figure">
-              <div class="media-frame media-frame--medium" data-dark-overlay="true">
-                <img
-                  src="/media/brasa-uml-diagram.png"
-                  alt="Relational database schema for the BRASA platform"
-                  class="media-img"
-                />
-              </div>
-              <figcaption class="media-caption">
-                Database schema connecting users, conferences, jobs, programs,
-                notifications, and access control in a single ecosystem
-              </figcaption>
-            </figure>
-
-          </div>
+          <figure class="media-figure">
+            <div class="media-frame media-frame--medium" data-dark-overlay="true">
+              <img
+                src="/media/brasa-uml-diagram.png"
+                alt="Relational database schema for the BRASA platform"
+                class="media-img"
+              />
+            </div>
+            <figcaption class="media-caption">
+              Database schema connecting users, conferences, jobs, programs,
+              notifications, and access control in a single ecosystem
+            </figcaption>
+          </figure>
         </div>
 
         <div class="piece-relevance">
@@ -352,18 +343,14 @@ import Layout from "../layouts/Layout.astro";
           </h2>
         </div>
       </div>
-      <p class="movement-epigraph">
-        “Where hidden patterns—neural, behavioral, or linguistic—take on musical
-        and intelligible form”
-      </p>
       <p class="movement-intro">
-        These works explore how internal states and semantic cues can be
+        <i>Where hidden patterns, neural, behavioral, or linguistic, take on musical
+        and intelligible form.</i>These works explore how internal states and semantic cues can be
         interpreted computationally and transformed into creative or functional
         feedback
       </p>
     </header>
 
-    <div class="pieces">
       <!-- Piece 4: Brainwaves to Sound -->
       <article class="piece">
         <h3 class="piece-title">
@@ -392,7 +379,7 @@ import Layout from "../layouts/Layout.astro";
 
           <!-- RIGHT: text + tags + relevance -->
           <div class="piece-split-text">
-            <p class="piece-overview">
+            <p class="piece-overview--onegrid">
               This project sonifies patterns of neural activity, exploring how
               internal cognitive states can be made perceptible and creatively
               meaningful. I designed the processing pipeline and mapping strategies,
@@ -406,8 +393,8 @@ import Layout from "../layouts/Layout.astro";
               <span class="piece-meta-pill">Band-power Features</span>
               <span class="piece-meta-pill">Timbre/harmony Mapping</span>
             </div>
-
           </div>
+
           <div class="piece-relevance">
             <div class="piece-meta-label">Relevance</div>
             <ul class="piece-meta-list">
@@ -445,94 +432,88 @@ import Layout from "../layouts/Layout.astro";
           </h2>
         </div>
       </div>
-      <p class="movement-epigraph">
-        “Where ideas become sound, structure becomes narrative, and the universe
-        resonates in musical form”
-      </p>
       <p class="movement-intro">
-        This movement highlights my compositional work, where scientific
+        <i>Where ideas become sound, structure becomes narrative, and the universe
+        resonates in musical form.</i> This movement highlights my compositional work, where scientificmetaphor and musical intuition intersect
         metaphor and musical intuition intersect
       </p>
     </header>
 
-    <div class="pieces">
-      <!-- Piece 5: Composition -->
-      <article class="piece">
-        <h3 class="piece-title">Piece 5 — The Universe as a Musical</h3>
-        <div class="piece-media-label">Instrumental Composition</div>
+    <!-- Piece 5: Composition -->
+    <article class="piece">
+      <h3 class="piece-title">Piece 5 — The Universe as a Musical</h3>
+      <div class="piece-media-label">Instrumental Composition</div>
 
-        <div class="piece-split piece-split--image-left">
-          <!-- LEFT COLUMN: DAW + Audio + Caption -->
-          <div class="piece-split-media">
-            <figure class="media-figure">
-              <div class="media-frame media-frame--hero">
-                <img
-                  src="/media/gravitational-waves-garageband.png"
-                  alt="DAW session view with layered textures and automation lanes"
-                  class="media-img"
-                />
-              </div>
-
-              <!-- Audio BELOW the image -->
-              <audio
-                class="media-audio"
-                controls
-                src="/media/gravitational-waves-audio.mp3"
-                style="margin-top: 0.9rem; width: 100%; border-radius: 12px;"
-              >
-                Your browser does not support the audio element.
-              </audio>
-              <figcaption class="media-caption">
-                DAW session view and audio excerpt of "The Universe as a Musical"
-              </figcaption>
-            </figure>
-          </div>
-
-          <!-- RIGHT COLUMN: Description + Meta + Relevance -->
-          <div class="piece-split-text">
-
-            <!-- Overview paragraph -->
-            <p class="piece-overview">
-              This piece imagines the universe as a vast musical narrative, translating
-              expansion, resonance, and gravitational tension into motif, harmony, and
-              timbre. Its form mirrors cosmological cycles—densities collapsing into 
-              clarity; tension dissolving into stillness—reflecting my belief that music 
-              can illuminate structures beyond the reach of language.
-            </p>
-
-            <!-- Meta Chips -->
-            <div class="piece-meta-row">
-              <span class="piece-meta-pill">Digital Audio Workstation</span>
-              <span class="piece-meta-pill">Extended Harmony</span>
-              <span class="piece-meta-pill">Dynamic Timbre Design</span>
-              <span class="piece-meta-pill">Narrative Composition</span>
+      <div class="piece-split piece-split--image-left">
+        <!-- LEFT COLUMN: DAW + Audio + Caption -->
+        <div class="piece-split-media">
+          <figure class="media-figure">
+            <div class="media-frame media-frame--hero">
+              <img
+                src="/media/gravitational-waves-garageband.png"
+                alt="DAW session view with layered textures and automation lanes"
+                class="media-img"
+              />
             </div>
 
-            <div class="piece-meta-label">Relevance</div>
-            <ul class="piece-meta-list">
-              <li>
-                <strong>Opera of the Future:</strong> Explores musical narrative, expressive 
-                structure, and imaginative cross-disciplinary thinking foundational for 
-                new operatic and interactive musical systems.
-              </li>
-            </ul>
+            <!-- Audio BELOW the image -->
+            <audio
+              class="media-audio"
+              controls
+              src="/media/gravitational-waves-audio.mp3"
+              style="margin-top: 0.9rem; width: 100%; border-radius: 12px;"
+            >
+              Your browser does not support the audio element.
+            </audio>
+            <figcaption class="media-caption">
+              DAW session view and audio excerpt of "The Universe as a Musical"
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- RIGHT COLUMN: Description + Meta + Relevance -->
+        <div class="piece-split-text">
+
+          <!-- Overview paragraph -->
+          <p class="piece-overview--onegrid">
+            This piece imagines the universe as a vast musical narrative, translating
+            expansion, resonance, and gravitational tension into motif, harmony, and
+            timbre. Its form mirrors cosmological cycles—densities collapsing into 
+            clarity; tension dissolving into stillness—reflecting my belief that music 
+            can illuminate structures beyond the reach of language.
+          </p>
+
+          <!-- Meta Chips -->
+          <div class="piece-meta-row">
+            <span class="piece-meta-pill">Digital Audio Workstation</span>
+            <span class="piece-meta-pill">Extended Harmony</span>
+            <span class="piece-meta-pill">Dynamic Timbre Design</span>
+            <span class="piece-meta-pill">Narrative Composition</span>
           </div>
 
-          <!-- FULL-WIDTH RELEVANCE -->
-          <!-- <div class="piece-relevance">
-            <div class="piece-meta-label">Relevance</div>
-            <ul class="piece-meta-list">
-              <li>
-                <strong>Opera of the Future:</strong> Explores musical narrative, expressive 
-                structure, and imaginative cross-disciplinary thinking foundational for 
-                new operatic and interactive musical systems.
-              </li>
-            </ul>
-          </div> -->
+          <div class="piece-meta-label">Relevance</div>
+          <ul class="piece-meta-list">
+            <li>
+              <strong>Opera of the Future:</strong> Explores musical narrative, expressive 
+              structure, and imaginative cross-disciplinary thinking foundational for 
+              new operatic and interactive musical systems.
+            </li>
+          </ul>
         </div>
-      </article>
 
-    </div>
+        <!-- FULL-WIDTH RELEVANCE -->
+        <!-- <div class="piece-relevance">
+          <div class="piece-meta-label">Relevance</div>
+          <ul class="piece-meta-list">
+            <li>
+              <strong>Opera of the Future:</strong> Explores musical narrative, expressive 
+              structure, and imaginative cross-disciplinary thinking foundational for 
+              new operatic and interactive musical systems.
+            </li>
+          </ul>
+        </div> -->
+      </div>
+    </article>
   </section>
 
   <!-- FUTURE DIRECTIONS & RESEARCH ALIGNMENT -->

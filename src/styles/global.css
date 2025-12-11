@@ -59,7 +59,7 @@ main {
 }
 
 .section {
-  margin-bottom: 3.5rem;
+  margin: 3rem;
 }
 
 .section:last-of-type {
@@ -156,7 +156,7 @@ main {
 /* Movements */
 
 .movement {
-  margin-top: 2.4rem;
+  margin-top: 3rem;
 }
 
 .movement-header {
@@ -192,8 +192,8 @@ main {
 
 .movement-intro {
   font-size: 0.92rem;
+  margin: 0.3rem 0;
   color: var(--muted);
-  max-width: 38rem;
 }
 
 /* Movement accent colors */
@@ -302,6 +302,13 @@ main {
 
 .piece-overview {
   margin: 1.5rem 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #e5e7eb;
+}
+
+.piece-overview--onegrid {
+  margin: 0 0 1.5rem 0;
   font-size: 0.9rem;
   line-height: 1.5;
   color: #e5e7eb;
@@ -543,7 +550,7 @@ main {
 /* Movement transition */
 
 .movement-transition {
-  margin-top: 2.3rem;
+  margin-top: 3rem;
   font-size: 0.9rem;
   color: var(--muted);
   font-style: italic;
