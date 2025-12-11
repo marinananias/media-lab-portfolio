@@ -364,14 +364,15 @@ main {
   display: grid;
   gap: 0.8rem;
   margin: 2rem 0;
+  align-items: stretch;
 }
 
 .piece-media-grid--three {
   grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr) minmax(0, 1.4fr);
 }
 
-.piece-media-grid--two {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.piece-media-grid--three--brasa {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 @media (max-width: 720px) {
@@ -459,8 +460,30 @@ main {
 }
 
 .media-frame--medium {
-  aspect-ratio: 16 / 9;
-  max-height: 200px;
+  width: 100%;
+}
+
+/* .media-frame--medium img.media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+} */
+
+/* Apply aspect ratio ONLY to BRASA images */
+/* .brasa-frame {
+  max-width: 300px;
+} */
+
+/* .brasa-frame img.media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+} */
+
+.brasa-frame[data-dark-overlay="true"] img.media-img {
+  filter: brightness(0.9) contrast(1.05);
 }
 
 .media-frame:hover {
@@ -509,6 +532,7 @@ main {
   margin-top: 0.32rem;
   font-size: 0.78rem;
   color: var(--muted);
+  display: inline-block;
 }
 
 .media-audio {
