@@ -2,8 +2,8 @@
   --bg: #020617;
   --bg-elevated: #030712;
   --bg-soft: #020617;
-  --accent: #f97316;
-  --accent-soft: rgba(249, 115, 22, 0.12);
+  --accent: #ff0358;
+  --accent-soft: rgb(255, 3, 88, 0.12);
   --text: #f9fafb;
   --muted: #9ca3af;
   --border-subtle: #1f2937;
@@ -13,6 +13,12 @@
   --shadow-soft: 0 18px 50px rgba(0, 0, 0, 0.6);
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     "Helvetica Neue", Arial, sans-serif;
+
+  /* movement accents */
+  --accent-interfaces: #38bdf8;
+  --accent-systems: #6ab22c;
+  --accent-signals: #a855f7;
+  --accent-language: #facc15;
 }
 
 *,
@@ -83,12 +89,14 @@ main {
   max-width: 40rem;
 }
 
+/* Cover */
+
 .cover-card {
   border-radius: var(--radius-xl);
   padding: 2.25rem 2rem;
   background: radial-gradient(
       circle at top left,
-      rgba(249, 115, 22, 0.12),
+      rgb(255, 3, 88, 0.1),
       transparent 60%
     ),
     linear-gradient(to bottom right, #020617, #020617);
@@ -112,7 +120,7 @@ main {
   padding: 0.9rem 1rem;
   border-radius: 0.9rem;
   background: var(--accent-soft);
-  border: 1px solid rgba(249, 115, 22, 0.6);
+  border: 1px solid rgb(255, 3, 88, 0.6);
   font-size: 0.9rem;
 }
 
@@ -136,12 +144,16 @@ main {
   color: var(--accent);
 }
 
+/* How to read */
+
 .htr-card {
   border-radius: var(--radius-lg);
-  padding: 1.6rem 1.5rem;
+  padding: 1rem 1.5rem;
   background: radial-gradient(circle at top, rgba(15, 23, 42, 0.85), #020617);
   border: 1px solid var(--border-subtle);
 }
+
+/* Movements */
 
 .movement {
   margin-top: 2.4rem;
@@ -184,26 +196,71 @@ main {
   max-width: 38rem;
 }
 
+/* Movement accent colors */
+
+.movement--interfaces .movement-label {
+  color: var(--accent-interfaces);
+}
+
+.movement--systems .movement-label {
+  color: var(--accent-systems);
+}
+
+.movement--signals .movement-label {
+  color: var(--accent-signals);
+}
+
+.movement--language .movement-label {
+  color: var(--accent-language);
+}
+
+/* Pieces */
+
 .pieces {
   display: grid;
-  gap: 1.4rem;
+  gap: 1.6rem;
   margin-top: 1.6rem;
 }
 
 .piece {
   border-radius: var(--radius-lg);
-  padding: 1.4rem 1.3rem 1.2rem;
+  padding: 1.7rem 1.6rem 1.5rem;
   background: linear-gradient(
     to bottom right,
-    rgba(15, 23, 42, 0.9),
+    rgba(15, 23, 42, 0.94),
     rgba(15, 23, 42, 1)
   );
   border: 1px solid var(--border-subtle);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.piece:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
+  border-color: rgb(255, 3, 88, 0.4);
+}
+
+.movement--interfaces .piece:hover {
+  border-color: rgb(56, 189, 248, 0.4);
+}
+
+.movement--systems .piece:hover {
+  border-color: rgb(106, 178, 44, 0.4);
+}
+
+.movement--signals .piece:hover {
+  border-color: rgba(168, 85, 247, 0.4);
+}
+
+.movement--language .piece:hover {
+  border-color: rgba(250, 204, 21, 0.4);
 }
 
 .piece-title {
-  font-size: 1rem;
-  font-weight: 550;
+  font-size: 1.08rem;
+  font-weight: 560;
   margin: 0 0 0.35rem;
 }
 
@@ -216,13 +273,14 @@ main {
 .piece-subheading {
   font-size: 0.85rem;
   font-weight: 600;
-  margin: 0.7rem 0 0.2rem;
+  margin: 0.9rem 0 0.25rem;
 }
 
 .piece-body {
   font-size: 0.9rem;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #e5e7eb;
+  margin: 0.3rem 0;
 }
 
 .piece-body + .piece-body {
@@ -240,6 +298,226 @@ main {
   margin-bottom: 0.15rem;
 }
 
+/* Info blocks inside pieces */
+
+.piece-overview {
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #e5e7eb;
+}
+
+.piece-overview strong {
+  font-weight: 600;
+}
+
+.piece-meta-row {
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.piece-meta-pill {
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  font-size: 0.78rem;
+  color: var(--muted);
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.piece-meta-label {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.68rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+.piece-meta-list {
+  margin: 0.2rem 0 0;
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  color: #e5e7eb;
+}
+
+.piece-meta-list li {
+  margin-bottom: 0.2rem;
+}
+
+/* Media blocks inside pieces */
+
+.piece-media-block {
+  margin: 0 0 1.1rem;
+}
+
+.piece-media-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.piece-media-grid {
+  display: grid;
+  gap: 0.8rem;
+  margin: 2rem 0;
+}
+
+.piece-media-grid--three {
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr) minmax(0, 1.4fr);
+}
+
+.piece-media-grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 720px) {
+  .piece-media-grid--three,
+  .piece-media-grid--two {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Split layout for single-image pieces (e.g., Piece 2) */
+
+.piece-split {
+  margin-top: 1.2rem;
+  display: grid;
+  gap: 1.4rem;
+  align-items: flex-start;
+}
+
+@media (min-width: 880px) {
+  .piece-split--image-left {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.7fr);
+  }
+}
+
+@media (max-width: 879px) {
+  .piece-split--image-left {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.piece-split-media .media-figure {
+  margin: 0;
+}
+
+.piece-split-text {
+  min-width: 0;
+}
+
+/* Make the relevance section span full width in split layouts */
+.piece-relevance {
+  grid-column: 1 / -1; /* spans across both columns */
+  margin-top: 0rem;
+}
+
+.piece-relevance .piece-meta-label {
+  margin-bottom: 0.3rem;
+}
+
+.piece-relevance ul {
+  margin-top: 0.2rem;
+}
+
+/* make sure caption sits right under image, not spanning weirdly */
+.piece-split-media .media-caption {
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.media-figure {
+  margin: 0;
+}
+
+/* frame gives aspect ratio + hover */
+
+.media-frame {
+  border-radius: 0.9rem;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background: #020617;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.media-frame--hero {
+  aspect-ratio: 16 / 9;
+}
+
+.media-frame--standard {
+  aspect-ratio: 4 / 3;
+}
+
+.media-frame--vertical {
+  max-width: 130px;
+}
+
+.media-frame--medium {
+  aspect-ratio: 16 / 9;
+  max-height: 200px;
+}
+
+.media-frame:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+  border-color: rgba(249, 115, 22, 0.35);
+}
+
+.movement--interfaces .media-frame:hover {
+  border-color: rgb(56, 189, 248, 0.4);
+}
+
+.movement--systems .media-frame:hover {
+  border-color: rgb(106, 178, 44, 0.4);
+}
+
+.movement--signals .media-frame:hover {
+  border-color: rgba(168, 85, 247, 0.35);
+}
+
+.movement--language .media-frame:hover {
+  border-color: rgba(250, 204, 21, 0.35);
+}
+
+.media-frame--hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.25));
+  opacity: 0.1;
+}
+
+.media-img,
+.media-video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.media-video {
+  max-height: 360px;
+}
+
+.media-caption {
+  margin-top: 0.32rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.media-audio {
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+/* Movement transition */
+
 .movement-transition {
   margin-top: 2.3rem;
   font-size: 0.9rem;
@@ -248,6 +526,8 @@ main {
   border-left: 2px solid var(--border-strong);
   padding-left: 0.75rem;
 }
+
+/* Future directions */
 
 .future-section {
   border-radius: var(--radius-xl);
@@ -280,7 +560,10 @@ main {
 .future-body {
   font-size: 0.9rem;
   color: #e5e7eb;
+  max-width: 70ch;
 }
+
+/* Footer */
 
 .footer {
   margin-top: 3rem;

@@ -2,6 +2,7 @@
 import "../styles/global.css";
 
 const { title = "Media Lab Portfolio · Marina Ananias" } = Astro.props;
+const year = new Date().getFullYear();
 ---
 
 <html lang="en">
@@ -18,14 +19,14 @@ const { title = "Media Lab Portfolio · Marina Ananias" } = Astro.props;
     <main>
       <slot />
       <footer class="footer">
-        <div>© {new Date().getFullYear()} · Marina Ananias</div>
+        <div>© {year} · Marina Ananias</div>
         <nav class="footer-nav">
           <a class="footer-link" href="#cover">Cover</a>
           <a class="footer-link" href="#interfaces">Interfaces</a>
           <a class="footer-link" href="#systems">Systems</a>
           <a class="footer-link" href="#signals">Signals</a>
           <a class="footer-link" href="#language">Language</a>
-          <a class="footer-link" href="#future">Future Directions</a>
+          <a class="footer-link" href="#future">Future</a>
         </nav>
       </footer>
     </main>

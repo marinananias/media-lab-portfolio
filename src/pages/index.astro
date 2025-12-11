@@ -5,9 +5,6 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
   <!-- COVER / LANDING -->
   <section id="cover" class="section">
-    <div class="section-header">
-      <div class="section-eyebrow">Cover / Landing</div>
-    </div>
 
     <div class="cover-card">
       <h1 class="cover-name">Marina Ananias</h1>
@@ -17,14 +14,11 @@ import Layout from "../layouts/Layout.astro";
       <div class="identity">
         I build expressive, human-centered technologies that draw on behavioral,
         cognitive, and community data to expand creativity, deepen learning, and
-        support human wellbeing and growth.
+        support human wellbeing and growth
       </div>
       <div class="links-row">
-        <span class="link-pill">Website</span>
-        <span class="link-pill">Email</span>
-        <!-- Replace with real links later, e.g.
+        <a class="link-pill" href="mailto:ananias.marina@gmail.com">Email</a>
         <a class="link-pill" href="https://marinaananias.com" target="_blank" rel="noreferrer">Website</a>
-        -->
       </div>
     </div>
   </section>
@@ -32,8 +26,8 @@ import Layout from "../layouts/Layout.astro";
   <!-- HOW TO READ THIS PORTFOLIO -->
   <section id="how-to-read" class="section">
     <div class="section-header">
-      <div class="section-eyebrow">How to Read This Portfolio</div>
-      <h2 class="section-title">Context & Navigation</h2>
+      <!-- <div class="section-eyebrow">How to Read This Portfolio</div> -->
+      <!-- <h2 class="section-title">Context &amp; Navigation</h2> -->
     </div>
 
     <div class="htr-card">
@@ -41,102 +35,173 @@ import Layout from "../layouts/Layout.astro";
         This portfolio presents a curated selection of my interdisciplinary work.
         Each piece includes a concise description, relevant technical context,
         and an explanation of how it aligns with research directions explored at
-        Opera of the Future, Responsive Environments, and Multisensory
-        Intelligence. My aim is to give a clear view of how computation, sound,
+        <b>Opera of the Future, Responsive Environments, and Multisensory
+        Intelligence</b>. My aim is to give a clear view of how computation, sound,
         sensing, and human-centered design converge in my practice and research
-        trajectory.
+        trajectory
       </p>
     </div>
   </section>
 
   <!-- MOVEMENT I — INTERFACES -->
-  <section id="interfaces" class="section movement">
+  <section id="interfaces" class="section movement movement--interfaces">
     <header class="movement-header">
       <div class="movement-title-row">
         <div>
           <div class="movement-label">Movement I — Interfaces</div>
-          <h2 class="movement-title">Where expression begins.</h2>
+          <h2 class="movement-title">Where expression begins</h2>
         </div>
       </div>
       <p class="movement-epigraph">
         “Where expression begins in the hand, in motion, in the meeting of sound
-        and touch.”
+        and touch”
       </p>
       <p class="movement-intro">
-        These works explore how accessible tools and interfaces can open
-        musical expression to anyone—performers, students, and people simply
-        curious about sound.
+        These works explore how accessible tools and interfaces can open musical
+        expression to anyone—performers, students, and people simply curious
+        about sound
       </p>
     </header>
 
     <div class="pieces">
-      <!-- Piece 1 -->
+      <!-- Piece 1: MIDI Songwriter -->
       <article class="piece">
         <h3 class="piece-title">
-          Piece 1 — The MIDI Songwriter: A Harmonizing Hyperinstrument Prototype 🎭
+          Piece 1 — The MIDI Songwriter
         </h3>
-        <p class="piece-media">
-          Media: device photo, wiring diagrams, build video
-        </p>
 
-        <h4 class="piece-subheading">Description</h4>
-        <p class="piece-body">
+        <div class="piece-media-label">A Harmonizing Hyperinstrument Prototype</div>
+
+        <p class="piece-overview">
           The MIDI Songwriter is a hardware instrument designed to make harmony
           intuitive. Built during my internship at Nerd Musician, it translates
-          tactile interaction into harmonically rich phrases, offering an
-          accessible but expressive entry point into composition. I designed the
-          enclosure, soldered components, programmed sensor mappings, and
-          refined the musical logic to respond fluidly to user input.
+          tactile interaction into harmonically rich phrases, offering an accessible
+          but expressive entry point into composition. I designed the enclosure,
+          soldered components, programmed sensor mappings, and refined the musical
+          logic so the instrument feels fluid and responsive in the hands of a
+          non-expert musician.
         </p>
 
-        <h4 class="piece-subheading">Technical Context</h4>
-        <p class="piece-body">
-          C++ on Arduino; analog sensors; DSP mapping strategies; MIDI-over-USB.
-        </p>
+        <div class="piece-meta-row">
+          <span class="piece-meta-pill">C++</span>
+          <span class="piece-meta-pill">Arduino</span>
+          <span class="piece-meta-pill">Analog Sensors</span>
+          <span class="piece-meta-pill">MIDI-over-USB</span>
+          <span class="piece-meta-pill">Hardware &amp; Firmware Design</span>
+        </div>
 
-        <h4 class="piece-subheading">Relevance</h4>
-        <p class="piece-body">
-          <strong>Opera of the Future:</strong> Embodies the ethos of
-          hyperinstruments that understand user intention and expand expressive
-          possibility.
-        </p>
-        <p class="piece-body">
-          <strong>Responsive Environments:</strong> A small embedded sensing
-          network transforming analog input into structured musical output.
-        </p>
+        <div class="piece-media-block">
+          <div class="piece-media-grid piece-media-grid--three">
+            <figure class="media-figure">
+              <div class="media-frame media-frame--hero">
+                <img
+                  src="/media/midi-songwriter-device.jpeg"
+                  alt="MIDI Songwriter assembled device glowing blue on a desk"
+                  class="media-img"
+                />
+              </div>
+              <figcaption class="media-caption">
+                Final assembled hardware prototype
+              </figcaption>
+            </figure>
+
+            <figure class="media-figure">
+              <div class="media-frame media-frame--standard">
+                <img
+                  src="/media/midi-songwriter-enclosure.png"
+                  alt="Laser-cut enclosure layout for the MIDI Songwriter"
+                  class="media-img"
+                />
+              </div>
+              <figcaption class="media-caption">
+                Laser-cut enclosure design
+              </figcaption>
+            </figure>
+
+            <figure class="media-figure">
+              <div class="media-frame media-frame--standard">
+                <img
+                  src="/media/midi-songwriter-wiring.png"
+                  alt="Internal wiring diagram of the MIDI Songwriter created in Fritzing"
+                  class="media-img"
+                />
+              </div>
+              <figcaption class="media-caption">
+                Wiring diagram connecting sensors, LEDs, and the
+                microcontroller
+              </figcaption>
+            </figure>
+
+          </div>
+        </div>
+
+        <div class="piece-meta-label">Relevance</div>
+        <ul class="piece-meta-list">
+          <li>
+            <strong>Opera of the Future:</strong> Hyperinstrument expanding expressive
+            possibility through intelligent harmonic accompaniment.
+          </li>
+          <li>
+            <strong>Responsive Environments:</strong> Tactile interface turning
+            physical gesture into structured musical output via embedded sensing.
+          </li>
+        </ul>
+
       </article>
 
-      <!-- Piece 2 -->
+      <!-- Piece 2: Browser Keyboard -->
       <article class="piece">
         <h3 class="piece-title">
-          Piece 2 — The Browser Keyboard: A Digital Interface for Accessible Music-Making 🎭🌌
+          Piece 2 — The Keyboard
         </h3>
-        <p class="piece-media">
-          Media: interaction video, UI image
-        </p>
 
-        <h4 class="piece-subheading">Description</h4>
-        <p class="piece-body">
-          This browser-based keyboard turns mouse movement into musical gesture,
-          allowing users to compose and perform without physical instruments.
-          Its minimalist design encourages intuitive exploration, making it
-          ideal for beginners learning fundamental musical relationships.
-        </p>
+        <div class="piece-split piece-split--image-left">
+          <!-- LEFT: image + caption -->
+          <div class="piece-split-media">
+            <figure class="media-figure">
+              <div class="media-frame media-frame--medium">
+                <img
+                  src="/media/midi-keyboard-151.png"
+                  alt="Browser-based keyboard interface mapping cursor movement to pitch and timbre"
+                  class="media-img"
+                />
+              </div>
+              <figcaption class="media-caption">
+                Browser-based interface used in classroom settings to teach basic harmony and melodic patterns.
+              </figcaption>
+            </figure>
+          </div>
 
-        <h4 class="piece-subheading">Technical Context</h4>
-        <p class="piece-body">
-          Scheme (Scamper), HTML5, JavaScript; cursor-to-sound mapping.
-        </p>
+          <!-- RIGHT: text + tags + relevance -->
+          <div class="piece-split-text">
+            <p class="piece-overview">
+              This browser-based keyboard turns mouse movement into musical gesture, allowing users to compose and
+              perform without physical instruments. Its minimalist interface encourages intuitive exploration,
+              making it ideal for beginners learning fundamental musical relationships and for quickly testing
+              musical ideas without any hardware.
+            </p>
 
-        <h4 class="piece-subheading">Relevance</h4>
-        <p class="piece-body">
-          <strong>Opera of the Future:</strong> A digital hyperscore-like
-          interface for democratizing composition.
-        </p>
-        <p class="piece-body">
-          <strong>Multisensory Intelligence:</strong> Converts motor/visual
-          input into structured sound—foundational multimodal AI thinking.
-        </p>
+            <div class="piece-meta-row" style="margin-top: 0.9rem;">
+              <span class="piece-meta-pill">Scheme (Scamper)</span>
+              <span class="piece-meta-pill">HTML5</span>
+              <span class="piece-meta-pill">JavaScript</span>
+              <span class="piece-meta-pill">Cursor-to-sound mapping</span>
+            </div>
+          </div>
+          <div class="piece-relevance">
+            <div class="piece-meta-label">Relevance</div>
+            <ul class="piece-meta-list">
+              <li>
+                <strong>Opera of the Future:</strong>
+                A digital hyperscore-like interface for democratizing composition.
+              </li>
+              <li>
+                <strong>Multisensory Intelligence:</strong>
+                Converts motor/visual input into structured sound — foundational multimodal AI thinking.
+              </li>
+            </ul>
+          </div>
+        </div>
       </article>
     </div>
 
@@ -147,7 +212,7 @@ import Layout from "../layouts/Layout.astro";
   </section>
 
   <!-- MOVEMENT II — SYSTEMS -->
-  <section id="systems" class="section movement">
+  <section id="systems" class="section movement movement--systems">
     <header class="movement-header">
       <div class="movement-title-row">
         <div>
@@ -169,31 +234,100 @@ import Layout from "../layouts/Layout.astro";
     </header>
 
     <div class="pieces">
-      <!-- Piece 3 -->
+      <!-- Piece 3: BRASA ecosystem -->
       <article class="piece">
         <h3 class="piece-title">
-          Piece 3 — BRASA: A Digital Ecosystem for a Global Community 🎭🌌
+          Piece 3 — BRASA
         </h3>
-        <p class="piece-media">
-          Media: system diagrams, screenshots, flows
-        </p>
+
+        <div class="piece-media-block">
+          <div class="piece-media-label">A Digital Ecosystem for a Global Community</div>
+          <div class="piece-media-grid piece-media-grid--two">
+            <figure class="media-figure">
+              <div class="media-frame media-frame--medium">
+                <img
+                  src="/media/brasa-uml-diagram.png"
+                  alt="Relational database schema for the BRASA platform"
+                  class="media-img"
+                />
+              </div>
+              <figcaption class="media-caption">
+                Database schema connecting users, conferences, jobs, programs,
+                notifications, and access control in a single ecosystem
+              </figcaption>
+            </figure>
+
+            <figure class="media-figure">
+              <div class="media-frame media-frame--medium">
+                <img
+                  src="/media/brasa-portal-fluxo.png"
+                  alt="Information and access flow diagram for BRASA portal"
+                  class="media-img"
+                />
+              </div>
+              <figcaption class="media-caption">
+                High-level flow of login, dashboards, tickets, opportunities,
+                and talent base across students, companies, and board members
+              </figcaption>
+            </figure>
+
+            <figure class="media-figure">
+              <div class="media-frame media-frame--medium">
+                <img
+                  src="/media/brasa-app.png"
+                  alt="Mockups of the official BRASA mobile app on multiple phones"
+                  class="media-img"
+                />
+              </div>
+              <figcaption class="media-caption">
+                Official BRASA mobile app, built with students for students,
+                used for schedules, badges, and conference access
+              </figcaption>
+            </figure>
+
+            <figure class="media-figure">
+              <div class="media-frame media-frame--medium">
+                <div class="media-frame media-frame--vertical">
+                  <img
+                    src="/media/brasa-gobrasa-landing.png"
+                    alt="Screenshot of the BRASA web site pages"
+                    class="media-img"
+                  />
+                </div>
+                <div class="media-frame media-frame--vertical">
+                  <img
+                    src="/media/brasa-gobrasa-parceiros.png"
+                    alt="Screenshot of the BRASA web site pages"
+                    class="media-img"
+                  />
+                </div>
+              </div>
+              <figcaption class="media-caption">
+                Web platform homepage presenting BRASA's mission, impact, and
+                access to event dashboards and opportunities
+              </figcaption>
+            </figure>
+          </div>
+        </div>
 
         <h4 class="piece-subheading">Description</h4>
         <p class="piece-body">
-          As Director of Technology and later COO of BRASA—the world’s largest
-          network of Brazilian students abroad—I led the redesign of the
-          organization’s digital infrastructure. This included a new website,
-          internal portal, mobile app, and unified database, transforming
-          fragmented systems into a cohesive platform that supports conferences,
-          mentorships, scholarships, and career opportunities for more than
-          15,000 students. Our work increased site traffic by 170% and improved
-          NPS by 105 points.
+          BRASA is the world's largest network of Brazilian students abroad, and
+          I led the redesign of its digital ecosystem as Director of Technology
+          and later COO. This included a new website, internal portal, mobile
+          app, and unified database, transforming fragmented systems into a
+          cohesive platform that supports conferences, mentorships,
+          scholarships, and career opportunities for more than 15,000 students.
+          Our work increased site traffic by 170% and improved NPS by 105
+          points.
         </p>
 
         <h4 class="piece-subheading">Technical Context</h4>
         <p class="piece-body">
           React/Next.js, Django REST, PostgreSQL, AWS, Docker, CI/CD; leadership
-          of a 15+ person cross-functional team.
+          of a 15+ person cross-functional team. The relational schema connects
+          users, education history, conferences, companies, jobs, programs, and
+          notifications in a single ecosystem.
         </p>
 
         <h4 class="piece-subheading">Relevance</h4>
@@ -211,40 +345,6 @@ import Layout from "../layouts/Layout.astro";
         </p>
       </article>
 
-      <!-- Piece 4 -->
-      <article class="piece">
-        <h3 class="piece-title">
-          Piece 4 — The Community Calendar: Rapid Co-Design for Real Needs 🕸️🌌
-        </h3>
-        <p class="piece-media">
-          Media: screen recordings
-        </p>
-
-        <h4 class="piece-subheading">Description</h4>
-        <p class="piece-body">
-          Built during a company hackathon, this React Native app supports
-          coordination and engagement for a community partner. I collaborated
-          across design and engineering to quickly gather requirements,
-          prototype interactions, and deliver an intuitive scheduling tool.
-        </p>
-
-        <h4 class="piece-subheading">Technical Context</h4>
-        <p class="piece-body">
-          React Native; state management; mobile UX.
-        </p>
-
-        <h4 class="piece-subheading">Relevance</h4>
-        <p class="piece-body">
-          <strong>Responsive Environments:</strong> A mediation layer between
-          people and their environments.
-        </p>
-        <p class="piece-body">
-          <strong>Multisensory Intelligence:</strong> A practical system
-          supporting productivity and wellbeing.
-        </p>
-      </article>
-    </div>
-
     <p class="movement-transition">
       If systems let communities speak, signals let individuals be
       heard—revealing patterns of mind, behavior, and semantics.
@@ -252,36 +352,54 @@ import Layout from "../layouts/Layout.astro";
   </section>
 
   <!-- MOVEMENT III — SIGNALS -->
-  <section id="signals" class="section movement">
+  <section id="signals" class="section movement movement--signals">
     <header class="movement-header">
       <div class="movement-title-row">
         <div>
           <div class="movement-label">Movement III — Signals</div>
           <h2 class="movement-title">
-            Where hidden patterns become audible and intelligible.
+            Where hidden patterns become audible and intelligible
           </h2>
         </div>
       </div>
       <p class="movement-epigraph">
         “Where hidden patterns—neural, behavioral, or linguistic—take on musical
-        and intelligible form.”
+        and intelligible form”
       </p>
       <p class="movement-intro">
         These works explore how internal states and semantic cues can be
         interpreted computationally and transformed into creative or functional
-        feedback.
+        feedback
       </p>
     </header>
 
     <div class="pieces">
-      <!-- Piece 5 -->
+      <!-- Piece 4: Brainwaves to Sound -->
       <article class="piece">
         <h3 class="piece-title">
-          Piece 5 — Brainwaves to Sound: Making Cognitive Patterns Audible 🎭🌌
+          Piece 4 — Brainwaves to Sound: Making Cognitive Patterns Audible
         </h3>
-        <p class="piece-media">
-          Media: EEG-to-audio diagrams, demo video
-        </p>
+
+        <div class="piece-media-block">
+          <div class="piece-media-label">Media</div>
+          <div class="piece-media-grid">
+            <figure class="media-figure">
+              <div class="media-frame media-frame--medium">
+                <video
+                  class="media-video"
+                  controls
+                  src="/media/brainwave-to-music-video.mp4"
+                >
+                  Your browser does not support the video tag
+                </video>
+              </div>
+              <figcaption class="media-caption">
+                Demo of EEG features being mapped to evolving musical textures
+                in real time
+              </figcaption>
+            </figure>
+          </div>
+        </div>
 
         <h4 class="piece-subheading">Description</h4>
         <p class="piece-body">
@@ -289,102 +407,98 @@ import Layout from "../layouts/Layout.astro";
           internal cognitive states can be made perceptible and creatively
           meaningful. I designed the processing pipeline and mapping strategies,
           translating brain features into evolving musical textures that reflect
-          emotional and cognitive shifts.
+          emotional and cognitive shifts
         </p>
 
         <h4 class="piece-subheading">Technical Context</h4>
         <p class="piece-body">
           Python; EEG preprocessing; band-power features; timbre/harmony
-          mapping.
+          mapping
         </p>
 
         <h4 class="piece-subheading">Relevance</h4>
         <p class="piece-body">
           <strong>Opera of the Future:</strong> A cognitive hyperinstrument
-          exploring sound for learning and wellbeing.
+          exploring sound for learning and wellbeing
         </p>
         <p class="piece-body">
           <strong>Responsive Environments:</strong> Physiological sensing
-          integrated with expressive feedback.
+          integrated with expressive feedback
         </p>
         <p class="piece-body">
           <strong>Multisensory Intelligence:</strong> Cross-modal translation of
-          neural states into structured sonic output.
+          neural states into structured sonic output
         </p>
       </article>
-
-      <!-- Piece 6 -->
-      <article class="piece">
-        <h3 class="piece-title">
-          Piece 6 — Semantic Mapping Engine: AI That Understands Human Intent 🌌🕸️
-        </h3>
-        <p class="piece-media">
-          Media: architecture diagram
-        </p>
-
-        <h4 class="piece-subheading">Description</h4>
-        <p class="piece-body">
-          I designed an AI-driven semantic engine that improves intent
-          recognition in a customer-support chatbot by using OpenAI embeddings
-          to classify user messages with higher accuracy and interpretability.
-          This significantly reduced manual intervention and improved system
-          stability across thousands of interactions.
-        </p>
-
-        <h4 class="piece-subheading">Technical Context</h4>
-        <p class="piece-body">
-          Python/Node; embedding-based semantic similarity; production-grade
-          API.
-        </p>
-
-        <h4 class="piece-subheading">Relevance</h4>
-        <p class="piece-body">
-          <strong>Multisensory Intelligence:</strong> Human–AI symbiosis and
-          robust multimodal interpretation.
-        </p>
-        <p class="piece-body">
-          <strong>Responsive Environments:</strong> Treats linguistic data as a
-          noisy sensor signal requiring inference.
-        </p>
-      </article>
-    </div>
 
     <p class="movement-transition">
       Signals shape meaning, but music gives that meaning form—a language that
-      reveals how you think, imagine, and create.
+      reveals how you think, imagine, and create
     </p>
   </section>
 
   <!-- MOVEMENT IV — LANGUAGE -->
-  <section id="language" class="section movement">
+  <section id="language" class="section movement movement--language">
     <header class="movement-header">
       <div class="movement-title-row">
         <div>
           <div class="movement-label">Movement IV — Language</div>
           <h2 class="movement-title">
-            Where ideas become sound and structure.
+            Where ideas become sound and structure
           </h2>
         </div>
       </div>
       <p class="movement-epigraph">
         “Where ideas become sound, structure becomes narrative, and the universe
-        resonates in musical form.”
+        resonates in musical form”
       </p>
       <p class="movement-intro">
         This movement highlights my compositional work, where scientific
-        metaphor and musical intuition intersect.
+        metaphor and musical intuition intersect
       </p>
     </header>
 
     <div class="pieces">
-      <!-- Piece 7 -->
+      <!-- Piece 5: Composition -->
       <article class="piece">
         <h3 class="piece-title">
-          Piece 7 — The Universe as a Musical: An Instrumental Composition 🎭
+          Piece 5 — The Universe as a Musical
         </h3>
-        <p class="piece-media">
-          Media: audio recording, score excerpt, program notes
-        </p>
+
+        <div class="piece-media-block">
+          <div class="piece-media-label">An Instrumental Composition</div>
+          <div class="piece-media-grid piece-media-grid--two">
+            <figure class="media-figure">
+              <div class="media-frame media-frame--hero">
+                <img
+                  src="/media/gravitational-waves-garageband.png"
+                  alt="Session view of the composition inspired by gravitational waves"
+                  class="media-img"
+                />
+              </div>
+              <figcaption class="media-caption">
+                DAW session view showing layered textures and automation lanes
+                for dynamic shaping
+              </figcaption>
+            </figure>
+
+            <figure class="media-figure">
+              <div class="media-frame media-frame--standard">
+                <audio
+                  class="media-audio"
+                  controls
+                  src="/media/gravitational-waves-audio.mp3"
+                >
+                  Your browser does not support the audio element
+                </audio>
+              </div>
+              <figcaption class="media-caption">
+                Audio excerpt from “The Universe as a Musical,” translating
+                expansion, resonance, and tension into musical form
+              </figcaption>
+            </figure>
+          </div>
+        </div>
 
         <h4 class="piece-subheading">Description</h4>
         <p class="piece-body">
@@ -393,25 +507,26 @@ import Layout from "../layouts/Layout.astro";
           tension into motif, harmony, and timbre. Its form mirrors
           cosmological cycles—densities collapsing into clarity; tension
           dissolving into stillness—reflecting my belief that music can
-          illuminate structures beyond the reach of language.
+          illuminate structures beyond the reach of language
         </p>
 
         <h4 class="piece-subheading">Technical Context</h4>
         <p class="piece-body">
           Composed using notation and digital audio software; explores extended
-          harmony and dynamic timbral motion.
+          harmony, layered textures, and dynamic timbral motion
         </p>
 
         <h4 class="piece-subheading">Relevance</h4>
         <p class="piece-body">
           <strong>Opera of the Future:</strong> Demonstrates narrative thinking,
           expressive structure, and cross-disciplinary imagination—core to
-          developing new musical and operatic technologies.
+          developing new musical and operatic technologies
         </p>
 
         <h4 class="piece-subheading">Additional Works</h4>
         <p class="piece-body">
-          A short playlist of selected pieces with brief conceptual notes.
+          A short playlist of selected pieces with brief conceptual notes
+          accompanies this work in my full portfolio
         </p>
       </article>
     </div>
@@ -432,7 +547,7 @@ import Layout from "../layouts/Layout.astro";
         long-term research vision centers on building systems that listen to
         people—not only through gesture or language, but through behavior,
         cognition, and participation—and respond in ways that help individuals
-        and communities grow.
+        and communities grow
       </p>
 
       <ul class="future-list">
@@ -441,7 +556,7 @@ import Layout from "../layouts/Layout.astro";
           <p class="future-body">
             I hope to explore instruments that engage with cognitive and
             emotional cues, adapting musical output to support self-regulation,
-            learning, and expressive depth.
+            learning, and expressive depth
           </p>
         </li>
         <li class="future-item">
@@ -449,7 +564,7 @@ import Layout from "../layouts/Layout.astro";
           <p class="future-body">
             I envision intelligent tools that scaffold musical creativity,
             offering adaptive suggestions in harmony, structure, and variation
-            while preserving human authorship.
+            while preserving human authorship
           </p>
         </li>
         <li class="future-item">
@@ -459,7 +574,7 @@ import Layout from "../layouts/Layout.astro";
           <p class="future-body">
             I want to design community-scale musical experiences where
             collective behavior—data flows, movement, communication—becomes a
-            shared sonic narrative.
+            shared sonic narrative
           </p>
         </li>
       </ul>
