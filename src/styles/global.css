@@ -121,7 +121,7 @@ main {
   border-radius: 0.9rem;
   background: var(--accent-soft);
   border: 1px solid rgb(255, 3, 88, 0.6);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 .links-row {
@@ -142,6 +142,17 @@ main {
 .link-pill:hover {
   border-color: var(--accent);
   color: var(--accent);
+}
+
+.a-brasa {
+  text-decoration: underline;
+  color: #6ab22c;
+}
+
+.supplementaty {
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  color: var(--muted);
 }
 
 /* How to read */
@@ -219,7 +230,7 @@ main {
 .pieces {
   display: grid;
   gap: 1.6rem;
-  margin-top: 1.6rem;
+  margin-top: 1rem;
 }
 
 .piece {
@@ -361,8 +372,8 @@ main {
 
 .piece-media-label {
   font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
+  /* text-transform: uppercase; */
+  letter-spacing: 0.15em;
   color: var(--muted);
   margin-bottom: 1rem;
 }
@@ -469,25 +480,6 @@ main {
 .media-frame--medium {
   width: 100%;
 }
-
-/* .media-frame--medium img.media-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-} */
-
-/* Apply aspect ratio ONLY to BRASA images */
-/* .brasa-frame {
-  max-width: 300px;
-} */
-
-/* .brasa-frame img.media-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-} */
 
 .brasa-frame[data-dark-overlay="true"] img.media-img {
   filter: brightness(0.9) contrast(1.05);
